@@ -314,6 +314,7 @@ try {
               <option value="">Seleccione una opción</option>
               <option value="contrato">Contrato de Aprendizaje</option>
               <option value="pasantia">Pasantía</option>
+              <option value="vinculo">Vinculación Laboral</option>
               <option value="proyecto">Proyecto Productivo</option>
               <option value="no_iniciado">No he iniciado práctica aún</option>
             </select>
