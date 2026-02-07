@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import NavbarSISEP from '../components/NavbarSISEP'
+import { LogOut } from "lucide-react";
+                       
+
 
 export default function AprendizPerfilCompleto() {
   const [aprendiz, setAprendiz] = useState(null)
@@ -133,7 +137,8 @@ try {
   }
 
   return (
-   <div className="min-h-screen relative">
+   <div className="min-h-screen bg-gradient-to-br from-gray-50 to-cyan-50">
+    <NavbarSISEP aprendiz={aprendiz} onLogout={handleLogout} />
       {/* Imagen de fondo MUY sutil */}
       <div
         className="fixed inset-0 bg-cover bg-center pointer-events-none"
@@ -143,22 +148,10 @@ try {
           opacity: '0.1'
         }}
       />
-      <div className="max-w-4xl mx-auto space-y-6">
+      <div className="max-w-4xl mx-auto space-y-6  pt-6 px-4">
         {/* Header */}
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-cyan-600 bg-clip-text text-transparent">
-            Mi Perfil
-          </h1>
-          <button
-            onClick={handleLogout}
-            className="text-sm text-gray-600 hover:text-red-600 transition-colors flex items-center gap-2"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            Salir
-          </button>
-        </div>
+       
+
 
         {/* Tarjeta de perfil */}
         <div className="card">
