@@ -436,10 +436,16 @@ try {
             <div className="card">
               <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
                 <span className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold text-sm">3</span>
-                Programar Visita
+                Programar Visita 
               </h3>
-              
+
+                           
               <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      *** Es una fecha tentativa!!!
+                  </label>
+                </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Tipo de Visita *
